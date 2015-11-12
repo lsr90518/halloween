@@ -1,0 +1,27 @@
+apiVersion: 0.1
+kind: ReplicationController
+metadata:
+  name: hlw-api
+  labels:
+    app: hlw
+    tier: hlw-api
+spec:
+  replicas: 3
+  template:
+    metadata:
+      labels:
+        app: hlw
+        tier: hlw-api
+    spec:
+      containers:
+      - name: hlw-container
+        image: hlw:0.1
+        resources:
+          requests:
+            cpu: 100m
+            memory: 100Mi
+        env:
+        - name: GET_HOSTS_FROM
+          value: dns
+        ports:
+        - containerPort: 3000
