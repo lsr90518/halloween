@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: hlw-container
-        image: gcr.io/google_samples/gb-frontend:v3
+        image: hlw:0.1
         resources:
           requests:
             cpu: 100m
