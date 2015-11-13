@@ -27,8 +27,8 @@ spec:
         image: hlw:0.1
         resources:
           requests:
-            cpu: 100m
-            memory: 100Mi
+            cpu: 500m
+            memory: 1024Mi
         env:
         - name: GET_HOSTS_FROM
           value: dns
